@@ -44,7 +44,7 @@ Cuando lo tengas, haz dos cosas antes de pasar a la sección 1:
 
 ### Fases 1 a 5 — Una sección cada vez
 
-Recorre las secciones **en este orden**, porque cada una se apoya en la anterior: las funciones definen qué pantallas hacen falta, y las funciones definen qué datos hay que guardar. Si empiezas por los datos, sale un modelo que no sirve a nada.
+Recorre las secciones **en este orden**, porque cada una se apoya en la anterior: las funciones definen qué interfaz hace falta, y las funciones definen qué datos hay que guardar. Si empiezas por los datos, sale un modelo que no sirve a nada.
 
 Para cada sección: explica en dos frases qué se busca, pregunta lo que falte, propón un borrador con lo que ya sabes, y confirma antes de pasar a la siguiente.
 
@@ -91,13 +91,17 @@ Y luego cada función con tres campos:
 
 Aquí solo va el camino que funciona. Los errores y los casos raros son de la fase de construcción, no del plano.
 
-### 3 · Las pantallas
+### 3 · La interfaz
 
-Entre **1 y 5**, en una tabla: pantalla, qué hay en ella, desde dónde se llega, y **qué función la usa**.
+Interfaz no significa pantalla. Una terminal es una interfaz, un bot de Telegram es una interfaz y una API es una interfaz: es la superficie por la que se entra al sistema, haya algo que mirar o no. Dilo al abrir la sección, porque mucha gente llega dando por hecho que esto no va con su proyecto y se la salta.
 
-Esa última columna es la que hace el trabajo: si una pantalla no tiene función detrás, sobra.
+**Primero se elige el tipo:** pantallas, comandos, mensajes, endpoints, o ninguna — corre solo. Es una línea antes de la tabla y ordena todo lo que viene detrás. Si salen dos tipos, cabe — un bot que además tiene un panel; si salen tres, casi siempre es que el proyecto es demasiado grande.
 
-**Si el proyecto no tiene pantallas** —una CLI, un scraper, una automatización, una API— no fuerces la sección. Lista sus comandos o sus endpoints en la misma tabla, o escribe "corre solo" y pasa a la siguiente. Nunca inventes una interfaz que nadie ha pedido.
+**Luego los puntos de entrada.** Entre **1 y 5**, en una tabla: el punto de entrada, qué se hace ahí, desde dónde se llega y **qué función lo usa**.
+
+Esa última columna es la que hace el trabajo: un punto de entrada sin función detrás sobra. Y el tipo elegido decide qué se escribe en la primera columna — una pantalla, un `/comando`, un mensaje que el bot entiende, una ruta de la API. Cuando el proyecto corre solo, el punto de entrada es lo que lo dispara: un horario, un fichero que aparece, un aviso de otro sistema. Nunca inventes una interfaz que nadie ha pedido.
+
+**Si el tipo es pantallas** —y solo entonces— sugiere dibujarlas a papel y boli antes de rellenar la tabla: un rectángulo por pantalla y flechas entre ellas. Sale en dos minutos, deja a la vista las que no llevan a ningún sitio, y es el dibujo que se adjunta al plano. Con los demás tipos no aporta nada: no lo pidas.
 
 ### 4 · Los datos
 
@@ -128,7 +132,7 @@ Sospechosos habituales que casi nunca entran en la primera versión: login, pane
 
 Usa exactamente la estructura de `references/plantilla.md`. Léela antes de entregar el documento final para no desviarte del formato.
 
-En `references/ejemplos.md` hay tres planos completos y bien rellenos: una app móvil, un SaaS web y un bot sin pantallas. Úsalos cuando la persona no sepa qué nivel de detalle se espera de una sección — enseñar un ejemplo desatasca mucho más rápido que explicar.
+En `references/ejemplos.md` hay tres planos completos y bien rellenos: una app móvil, un SaaS web y un bot con interfaz de comandos. Úsalos cuando la persona no sepa qué nivel de detalle se espera de una sección — enseñar un ejemplo desatasca mucho más rápido que explicar.
 
 ---
 
@@ -140,6 +144,6 @@ En `references/ejemplos.md` hay tres planos completos y bien rellenos: una app m
 
 **Aceptar funciones no comprobables.** "Que sea rápido", "que sea fácil de usar", "que tenga buena UX". Son deseos. Pregunta cómo se comprobaría, y de ahí sale la función de verdad.
 
-**Un plano gigante.** Si salen ocho funciones y siete pantallas, el proyecto no cabe en una primera versión. Es el mejor momento para recortar, porque todavía no se ha escrito nada. Propón qué se va a *Fuera del plano* y por qué.
+**Un plano gigante.** Si salen ocho funciones y siete puntos de entrada, el proyecto no cabe en una primera versión. Es el mejor momento para recortar, porque todavía no se ha escrito nada. Propón qué se va a *Fuera del plano* y por qué.
 
 **Sacar el documento demasiado pronto.** Si aún faltan secciones por hablar, no entregues el markdown completo: enseña solo el trozo cerrado. El documento entero se entrega al final.

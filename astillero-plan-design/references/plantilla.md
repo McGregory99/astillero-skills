@@ -47,9 +47,11 @@ Estructura exacta del documento de salida. No añadas secciones ni cambies el or
 
 ---
 
-## 3 · Las pantallas
+## 3 · La interfaz
 
-| Pantalla | Qué hay en ella | Se llega desde | Función que la usa |
+▸ **Tipo de interfaz:** pantallas · comandos · mensajes · endpoints · ninguna, corre solo
+
+| Punto de entrada | Qué se hace ahí | Se llega desde | Función que lo usa |
 |---|---|---|---|
 | ▸ | ▸ | (entrada) | ▸ |
 | ▸ | ▸ | ▸ | ▸ |
@@ -86,7 +88,7 @@ Estructura exacta del documento de salida. No añadas secciones ni cambies el or
 ## Notas de formato
 
 - **Entre 3 y 6 funciones.** Copia el bloque de función tantas veces como haga falta dentro de ese rango.
-- **Entre 1 y 5 pantallas.** Si el proyecto no tiene interfaz visual, sustituye la tabla por los comandos o endpoints, o por la línea "Corre solo. No hay pantallas: la entrada y la salida son ______."
+- **Entre 1 y 5 puntos de entrada.** El tipo de interfaz elegido decide de qué son: pantallas, comandos, mensajes, endpoints o el disparador que hace arrancar al proyecto.
 - **El bloque "Solo carril de valor"** se elimina entero si el carril es de kilómetros.
 - **La sección 6** se deja vacía solo si de verdad no quedó ninguna duda abierta. Es raro.
 - Las líneas de aviso de las secciones 2, 3 y 4 (las "pruebas") **no van en el documento final**: son para conducir la entrevista, no para el entregable.

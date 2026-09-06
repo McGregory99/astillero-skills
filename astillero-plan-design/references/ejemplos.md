@@ -4,7 +4,7 @@ Tres tipos de proyecto distintos para enseñar el nivel de detalle que se espera
 
 - **Ejemplo 1 — Reto Flexiones:** app móvil, carril de kilómetros, con pantallas.
 - **Ejemplo 2 — Un Postbridge:** SaaS web, carril de valor, con pantallas y varias integraciones.
-- **Ejemplo 3 — Cazapistas:** bot de Telegram, carril de kilómetros, **sin pantallas**. El más útil para demostrar que el plano vale igual sin interfaz.
+- **Ejemplo 3 — Cazapistas:** bot de Telegram, carril de kilómetros, con **interfaz de comandos**. El más útil para enseñar que la sección 3 no va solo de pantallas.
 
 ---
 
@@ -54,9 +54,11 @@ Tres tipos de proyecto distintos para enseñar el nivel de detalle que se espera
 
 ---
 
-## 3 · Las pantallas
+## 3 · La interfaz
 
-| Pantalla | Qué hay en ella | Se llega desde | Función que la usa |
+▸ **Tipo de interfaz:** pantallas
+
+| Punto de entrada | Qué se hace ahí | Se llega desde | Función que lo usa |
 |---|---|---|---|
 | Inicio | racha actual, objetivo del día y botón "empezar" | (entrada) | F3 |
 | Sesión | cámara a pantalla completa y contador grande | Inicio | F1, F2 |
@@ -143,9 +145,11 @@ Tres tipos de proyecto distintos para enseñar el nivel de detalle que se espera
 
 ---
 
-## 3 · Las pantallas
+## 3 · La interfaz
 
-| Pantalla | Qué hay en ella | Se llega desde | Función que la usa |
+▸ **Tipo de interfaz:** pantallas
+
+| Punto de entrada | Qué se hace ahí | Se llega desde | Función que lo usa |
 |---|---|---|---|
 | Cuentas | redes disponibles y cuáles están conectadas | (entrada) | F1 |
 | Nueva publicación | subida del vídeo, texto y selector de redes | Cuentas | F2, F3 |
@@ -184,7 +188,7 @@ Tres tipos de proyecto distintos para enseñar el nivel de detalle que se espera
 
 ---
 
-## Ejemplo 3 — Cazapistas (sin pantallas)
+## Ejemplo 3 — Cazapistas (interfaz de comandos)
 
 ```markdown
 # 📐 EL PLANO
@@ -230,17 +234,15 @@ Tres tipos de proyecto distintos para enseñar el nivel de detalle que se espera
 
 ---
 
-## 3 · Las pantallas
+## 3 · La interfaz
 
-Corre solo. No hay pantallas: la entrada y la salida son mensajes de Telegram.
+▸ **Tipo de interfaz:** comandos
 
-**Comandos del bot:**
-
-| Comando | Qué hace | Función que la usa |
-|---|---|---|
-| /avisar [día] [hora] | crea un aviso nuevo | F1 |
-| /misavisos | lista los avisos activos | F1, F4 |
-| /quitar [nº] | desactiva un aviso | F4 |
+| Punto de entrada | Qué se hace ahí | Se llega desde | Función que lo usa |
+|---|---|---|---|
+| /avisar [día] [hora] | crea un aviso nuevo | (entrada) | F1 |
+| /misavisos | lista los avisos activos | (entrada) | F1, F4 |
+| /quitar [nº] | desactiva un aviso | /misavisos | F4 |
 
 ---
 
@@ -278,4 +280,4 @@ Corre solo. No hay pantallas: la entrada y la salida son mensajes de Telegram.
 
 **Ejemplo 2.** Aparece una entidad, **Envío**, que no es obvia: hace falta porque una publicación puede salir bien en tres redes y fallar en la cuarta. Sin ella no se puede cumplir la función 4. Es el mejor ejemplo de cómo los datos salen de las funciones y no al revés.
 
-**Ejemplo 3.** El proyecto no tiene pantallas y el plano funciona igual. Y aparece **Notificación enviada**, una entidad que no existe en el mundo real: existe solo porque el sistema necesita recordar a quién ya avisó para no duplicar mensajes. Cuando surge algo así en una entrevista, merece la pena pararse y señalarlo.
+**Ejemplo 3.** Su interfaz es de comandos: un tipo más de los cinco, no una excepción al documento. Y aparece **Notificación enviada**, una entidad que no existe en el mundo real: existe solo porque el sistema necesita recordar a quién ya avisó para no duplicar mensajes. Cuando surge algo así en una entrevista, merece la pena pararse y señalarlo.
