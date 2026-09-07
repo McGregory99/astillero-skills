@@ -4,7 +4,9 @@ Tres tipos de proyecto distintos para enseñar el nivel de detalle que se espera
 
 - **Ejemplo 1 — Reto Flexiones:** app móvil, carril de kilómetros, con pantallas.
 - **Ejemplo 2 — Un Postbridge:** SaaS web, carril de valor, con pantallas y varias integraciones.
-- **Ejemplo 3 — Cazapistas:** bot de Telegram, carril de kilómetros, con **interfaz de comandos**. El más útil para enseñar que la sección 3 no va solo de pantallas.
+- **Ejemplo 3 — Cazapistas:** bot de Telegram, carril de kilómetros, sin pantallas. El más útil para enseñar que la sección 3 no va solo de pantallas.
+
+Fíjate en cómo están escritos: en prosa, con las palabras de quien los escribió, sin tablas y sin jerga. Ese es el nivel que hay que buscar.
 
 ---
 
@@ -13,84 +15,79 @@ Tres tipos de proyecto distintos para enseñar el nivel de detalle que se espera
 ```markdown
 # 📐 EL PLANO
 
-**Proyecto:** Reto Flexiones
-**Autor:** Goyo Cancio
-**Fecha:** 06/09/2026
-**Carril:** Kilómetros
+### Piensa tu proyecto antes de construirlo
+
+**Proyecto:** Reto Flexiones · **Autor:** Goyo Cancio · **Fecha:** 07/09/2026 · **Carril:** kilómetros
 
 ---
 
-## 1 · La frase
+## 1 · De qué va
 
-▸ **Qué hace:** cuenta tus flexiones con la cámara y no te deja usar el móvil hasta que llegas a tu objetivo del día.
-▸ **Para quién:** para mí y para el grupo de amigos con el que quiero competir.
-▸ **Qué NO hace:** no es una app de entrenamiento. No hace rutinas, no cuenta calorías y no te dice cómo mejorar la técnica.
-
----
-
-## 2 · Las funciones
-
-▸ **El recorrido en una línea:** empieza cuando abro la app por la mañana, entonces hago flexiones delante de la cámara mientras las cuenta, y al final queda el día marcado como hecho y mi racha actualizada.
-
-### Función 1 — Contar flexiones
-▸ **Qué la dispara:** el usuario pulsa "empezar" y la cámara se activa.
-▸ **Qué hace:** detecta la postura del cuerpo y suma una repetición cada vez que se completa el movimiento.
-▸ **Cómo sé que ha ido bien:** el contador sube en pantalla a cada flexión y no cuenta movimientos a medias.
-
-### Función 2 — Marcar el día como hecho
-▸ **Qué la dispara:** el contador llega al objetivo del día.
-▸ **Qué hace:** guarda la sesión con la fecha y el número de repeticiones, y suma un día a la racha.
-▸ **Cómo sé que ha ido bien:** al volver a abrir la app aparece "hoy: hecho" y la racha tiene un día más.
-
-### Función 3 — Ver mi racha
-▸ **Qué la dispara:** el usuario abre la app.
-▸ **Qué hace:** muestra cuántos días seguidos lleva cumpliendo y el histórico de la semana.
-▸ **Cómo sé que ha ido bien:** el número coincide con los días marcados como hechos, y se rompe a cero si falta un día.
-
-### Función 4 — Comparar con mis amigos
-▸ **Qué la dispara:** el usuario entra en la pestaña de grupo.
-▸ **Qué hace:** lista a los miembros del grupo ordenados por racha.
-▸ **Cómo sé que ha ido bien:** la lista está ordenada de mayor a menor y me veo a mí mismo en mi posición.
+**¿Qué hace?** Cuenta tus flexiones con la cámara del móvil y no te deja usarlo hasta que llegas al número que te has puesto para hoy.
+**¿Para quién es?** Para mí, y para el grupo de cuatro con el que quiero picarme.
+**¿Qué NO va a hacer?** No es una app de entrenamiento. No monta rutinas, no cuenta calorías y no te corrige la técnica. Cuenta flexiones y punto.
 
 ---
 
-## 3 · La interfaz
+## 2 · Qué sabe hacer
 
-▸ **Tipo de interfaz:** pantallas
+**De un tirón:** empieza cuando abro la app por la mañana, entonces hago flexiones delante de la cámara mientras las va contando, y al final queda el día marcado como hecho y mi racha con un día más.
 
-| Punto de entrada | Qué se hace ahí | Se llega desde | Función que lo usa |
-|---|---|---|---|
-| Inicio | racha actual, objetivo del día y botón "empezar" | (entrada) | F3 |
-| Sesión | cámara a pantalla completa y contador grande | Inicio | F1, F2 |
-| Grupo | lista de amigos ordenada por racha | Inicio | F4 |
+**Contar flexiones**
+La pone en marcha que le dé a "empezar" y se encienda la cámara. Lo que hace es mirar la postura del cuerpo y sumar una cada vez que el movimiento se completa entero. Sé que va bien porque el número sube en pantalla a cada repetición y no cuenta las que me quedo a medias.
 
-▸ **Adjunto el dibujo:** sí
+**Dar el día por hecho**
+La pone en marcha que el contador llegue al objetivo. Lo que hace es guardar la sesión con la fecha y el número, y sumar un día a la racha. Sé que va bien porque al volver a abrir la app pone "hoy: hecho" y la racha tiene uno más.
 
----
+**Enseñarme mi racha**
+La pone en marcha abrir la app. Lo que hace es mostrar cuántos días seguidos llevo y cómo ha ido la semana. Sé que va bien porque el número cuadra con los días marcados, y se rompe a cero si me salto uno.
 
-## 4 · Los datos
-
-| Cosa | Qué sé de ella | Se relaciona con |
-|---|---|---|
-| Usuario | nombre, objetivo diario, racha actual | tiene muchas Sesiones, pertenece a un Grupo |
-| Sesión | fecha, nº de flexiones, si cumplió el objetivo | pertenece a un Usuario |
-| Grupo | nombre, código para unirse | tiene muchos Usuarios |
+**Compararme con los otros**
+La pone en marcha entrar en la pestaña del grupo. Lo que hace es listar a los cuatro ordenados por racha. Sé que va bien porque están de mayor a menor y yo aparezco en mi sitio.
 
 ---
 
-## 5 · Fuera del plano
+## 3 · Por dónde se toca
 
-▸ Otros ejercicios además de flexiones
-▸ Batallas en tiempo real contra otro usuario
-▸ Bloquear de verdad el móvil a nivel de sistema
-▸ Login con Google o Apple
-▸ Notificaciones push
+Tres pantallas.
+
+**Inicio.** La racha, el objetivo de hoy y un botón grande de "empezar". Es por donde se entra.
+**Sesión.** La cámara a pantalla completa con el contador encima, bien gordo para verlo desde el suelo.
+**Grupo.** La lista de los cuatro ordenada por racha.
+
+De Inicio se va a las otras dos y se vuelve. No hay más navegación.
+
+Dibujo hecho a boli, adjunto.
 
 ---
 
-## 6 · Pendientes
+## 4 · Qué tiene que recordar
 
-- [ ] [PENDIENTE: qué pasa si el usuario cierra la app a mitad de la sesión — se pierde la cuenta o se guarda parcial]
+De cada persona: su nombre, cuántas flexiones se ha puesto de objetivo al día, y cuántos días lleva seguidos cumpliendo.
+
+De cada sesión: el día que fue, cuántas hizo, si llegó al objetivo, y de quién era.
+
+Del grupo: cómo se llama y un código para que los otros se unan.
+
+---
+
+## 5 · Lo que se queda fuera
+
+Otros ejercicios que no sean flexiones.
+
+Batallas en directo contra otro, cámara contra cámara.
+
+Bloquear el móvil de verdad, a nivel de sistema. En la primera versión basta con que la app te lo recuerde.
+
+Entrar con Google o con Apple.
+
+Notificaciones.
+
+---
+
+## 6 · Lo que no sé todavía
+
+[PENDIENTE: si cierro la app a mitad de la sesión, ¿se pierde la cuenta o se guarda lo que llevaba?]
 ```
 
 ---
@@ -100,184 +97,174 @@ Tres tipos de proyecto distintos para enseñar el nivel de detalle que se espera
 ```markdown
 # 📐 EL PLANO
 
-**Proyecto:** Un Postbridge
-**Autor:** ▸
-**Fecha:** 06/09/2026
-**Carril:** Valor
+### Piensa tu proyecto antes de construirlo
+
+**Proyecto:** Un Postbridge · **Autor:** · **Fecha:** 07/09/2026 · **Carril:** valor
 
 ---
 
-## 1 · La frase
+## 1 · De qué va
 
-▸ **Qué hace:** publica el mismo vídeo en todas tus redes sociales a la vez, desde un solo sitio.
-▸ **Para quién:** para creadores que suben la misma pieza a tres o cuatro redes y pierden veinte minutos repitiendo el proceso en cada una.
-▸ **Qué NO hace:** no edita el vídeo, no genera los textos y no te dice cuándo publicar.
+**¿Qué hace?** Subes un vídeo una vez y se publica solo en todas tus redes.
+**¿Para quién es?** Para el que sube la misma pieza a tres o cuatro sitios y pierde veinte minutos repitiendo el mismo proceso.
+**¿Qué NO va a hacer?** No edita el vídeo, no te escribe el texto y no te dice a qué hora publicar.
 
-**Solo carril de valor**
-▸ **Quién es esa persona:** creadores de contenido en solitario que publican a diario.
-▸ **Qué hace hoy sin tu producto:** abre cada app una por una, sube el archivo, escribe el pie de foto y publica. Cuatro veces.
-
----
-
-## 2 · Las funciones
-
-▸ **El recorrido en una línea:** empieza cuando el creador sube un vídeo y escribe un texto, entonces elige a qué redes va y confirma, y al final queda publicado en todas ellas con su estado visible.
-
-### Función 1 — Conectar una red social
-▸ **Qué la dispara:** el usuario pulsa "conectar" en una red de la lista.
-▸ **Qué hace:** le lleva a autorizar la cuenta y guarda el permiso para publicar en su nombre.
-▸ **Cómo sé que ha ido bien:** la red aparece marcada como conectada con el nombre de la cuenta.
-
-### Función 2 — Preparar una publicación
-▸ **Qué la dispara:** el usuario sube un vídeo y escribe el texto.
-▸ **Qué hace:** guarda la publicación como borrador y muestra a qué redes conectadas puede ir.
-▸ **Cómo sé que ha ido bien:** el borrador se recupera igual si cierro y vuelvo a entrar.
-
-### Función 3 — Publicar en todas a la vez
-▸ **Qué la dispara:** el usuario selecciona las redes y pulsa "publicar".
-▸ **Qué hace:** envía el vídeo y el texto a cada red seleccionada, una por una.
-▸ **Cómo sé que ha ido bien:** el vídeo aparece publicado en cada una de las redes elegidas.
-
-### Función 4 — Ver qué ha salido y qué ha fallado
-▸ **Qué la dispara:** termina el envío de una publicación.
-▸ **Qué hace:** registra el resultado de cada red por separado y lo muestra.
-▸ **Cómo sé que ha ido bien:** veo publicado, fallido o pendiente en cada red, con el motivo si ha fallado.
+**Quién es esa persona.** Creadores que van solos y publican a diario. Gente como yo hace seis meses.
+**Cómo se apaña hoy.** Abre Instagram, sube, escribe el pie, publica. Cierra. Abre TikTok, sube, escribe otra vez lo mismo, publica. Y así cuatro veces.
 
 ---
 
-## 3 · La interfaz
+## 2 · Qué sabe hacer
 
-▸ **Tipo de interfaz:** pantallas
+**De un tirón:** empieza cuando subo un vídeo y escribo el texto, entonces elijo a qué redes va y le doy a publicar, y al final queda publicado en todas con el estado de cada una a la vista.
 
-| Punto de entrada | Qué se hace ahí | Se llega desde | Función que lo usa |
-|---|---|---|---|
-| Cuentas | redes disponibles y cuáles están conectadas | (entrada) | F1 |
-| Nueva publicación | subida del vídeo, texto y selector de redes | Cuentas | F2, F3 |
-| Historial | publicaciones enviadas con su estado por red | Cuentas | F4 |
+**Conectar una red**
+La pone en marcha darle a "conectar" en una de las redes de la lista. Lo que hace es llevarme a autorizar la cuenta y guardar el permiso para publicar en mi nombre. Sé que va bien porque esa red se queda marcada como conectada, con el nombre de mi cuenta al lado.
 
-▸ **Adjunto el dibujo:** sí
+**Preparar la publicación**
+La pone en marcha subir el vídeo y escribir el texto. Lo que hace es guardarlo como borrador y enseñarme a qué redes conectadas puede ir. Sé que va bien porque si cierro y vuelvo a entrar, el borrador sigue ahí igual.
 
----
+**Publicar en todas de golpe**
+La pone en marcha marcar las redes y darle a publicar. Lo que hace es mandar el vídeo y el texto a cada una, de una en una. Sé que va bien porque el vídeo aparece publicado en cada red que marqué.
 
-## 4 · Los datos
-
-| Cosa | Qué sé de ella | Se relaciona con |
-|---|---|---|
-| Usuario | email, plan | tiene muchas Cuentas y muchas Publicaciones |
-| Cuenta conectada | red social, nombre de la cuenta, permiso vigente | pertenece a un Usuario |
-| Publicación | vídeo, texto, fecha de envío | pertenece a un Usuario, tiene muchos Envíos |
-| Envío | a qué cuenta fue, estado, motivo del fallo | pertenece a una Publicación y a una Cuenta |
+**Contarme qué ha salido y qué ha fallado**
+La pone en marcha que termine el envío. Lo que hace es apuntar cómo fue en cada red por separado. Sé que va bien porque veo publicado, fallido o pendiente en cada una, y si falló me dice por qué.
 
 ---
 
-## 5 · Fuera del plano
+## 3 · Por dónde se toca
 
-▸ Programar publicaciones para más adelante
-▸ Adaptar el texto a cada red automáticamente
-▸ Estadísticas de rendimiento de cada publicación
-▸ Cobros y suscripción
-▸ Equipos con varios usuarios sobre la misma cuenta
+Tres pantallas.
+
+**Cuentas.** Las redes disponibles y cuáles tengo ya conectadas. Es la entrada.
+**Nueva publicación.** Subir el vídeo, escribir el texto y marcar a qué redes va.
+**Historial.** Lo que he publicado, y al lado de cada una el estado de cada red.
 
 ---
 
-## 6 · Pendientes
+## 4 · Qué tiene que recordar
 
-- [ ] [PENDIENTE: si una red falla y las otras tres funcionan, la publicación cuenta como enviada o como fallida]
-- [ ] [PENDIENTE: qué pasa cuando caduca el permiso de una cuenta — le aviso o lo descubre al publicar]
+De cada usuario: su email y qué plan tiene.
+
+De cada cuenta conectada: de qué red es, con qué nombre, y si el permiso sigue siendo válido.
+
+De cada publicación: el vídeo, el texto y cuándo se mandó.
+
+Y esto es lo importante: de cada envío por separado, a qué cuenta fue, si salió bien o mal, y el motivo si falló. Porque una misma publicación puede salir bien en tres redes y petar en la cuarta, y necesito saberlo por separado.
+
+---
+
+## 5 · Lo que se queda fuera
+
+Programar publicaciones para más tarde.
+
+Adaptar el texto a cada red automáticamente.
+
+Estadísticas de cómo va cada publicación.
+
+Cobrar. La primera versión es para mí y para dos amigos.
+
+Equipos con varias personas sobre la misma cuenta.
+
+---
+
+## 6 · Lo que no sé todavía
+
+[PENDIENTE: si una red falla y las otras tres van bien, ¿la publicación cuenta como enviada o como fallida?]
+
+[PENDIENTE: cuando caduca el permiso de una cuenta, ¿le aviso antes o se entera al intentar publicar?]
 ```
 
 ---
 
-## Ejemplo 3 — Cazapistas (interfaz de comandos)
+## Ejemplo 3 — Cazapistas
 
 ```markdown
 # 📐 EL PLANO
 
-**Proyecto:** Cazapistas
-**Autor:** ▸
-**Fecha:** 06/09/2026
-**Carril:** Kilómetros
+### Piensa tu proyecto antes de construirlo
+
+**Proyecto:** Cazapistas · **Autor:** · **Fecha:** 07/09/2026 · **Carril:** kilómetros
 
 ---
 
-## 1 · La frase
+## 1 · De qué va
 
-▸ **Qué hace:** vigila las pistas de pádel de mi club y me avisa por Telegram en cuanto se libera un hueco a la hora que me interesa.
-▸ **Para quién:** para mí y para los cuatro con los que juego, que estamos hartos de refrescar la web a ver si alguien cancela.
-▸ **Qué NO hace:** no reserva la pista por ti. Solo avisa.
-
----
-
-## 2 · Las funciones
-
-▸ **El recorrido en una línea:** empieza cuando le digo al bot qué días y horas me interesan, entonces el bot revisa la web cada pocos minutos, y al final queda un mensaje en mi Telegram en cuanto aparece un hueco que encaja.
-
-### Función 1 — Guardar lo que me interesa
-▸ **Qué la dispara:** el usuario manda al bot un mensaje con el día y la franja horaria.
-▸ **Qué hace:** guarda esa preferencia asociada a su cuenta de Telegram.
-▸ **Cómo sé que ha ido bien:** el bot responde repitiendo lo que ha entendido y aparece en la lista al pedir "mis avisos".
-
-### Función 2 — Revisar la disponibilidad
-▸ **Qué la dispara:** cada 5 minutos.
-▸ **Qué hace:** consulta la web del club y anota qué huecos hay libres ahora mismo.
-▸ **Cómo sé que ha ido bien:** cada revisión deja registrado el estado, y si la web no responde queda anotado como fallo en vez de como "sin huecos".
-
-### Función 3 — Avisar de un hueco
-▸ **Qué la dispara:** aparece un hueco libre que coincide con la preferencia de alguien.
-▸ **Qué hace:** manda un mensaje de Telegram a esa persona con el día, la hora y el enlace para reservar.
-▸ **Cómo sé que ha ido bien:** el mensaje llega en menos de 5 minutos desde que el hueco aparece, y no se repite el mismo aviso dos veces.
-
-### Función 4 — Dejar de vigilar
-▸ **Qué la dispara:** el usuario manda "quitar" o pasa el día que le interesaba.
-▸ **Qué hace:** desactiva esa preferencia.
-▸ **Cómo sé que ha ido bien:** deja de recibir avisos de esa franja y no aparece en "mis avisos".
+**¿Qué hace?** Vigila las pistas de pádel de mi club y me avisa por Telegram en cuanto se libera un hueco a la hora que me interesa.
+**¿Para quién es?** Para mí y para los cuatro con los que juego, que estamos hartos de refrescar la web a ver si alguien ha cancelado.
+**¿Qué NO va a hacer?** No reserva la pista. Solo avisa. Reservar ya lo hace uno corriendo desde el móvil.
 
 ---
 
-## 3 · La interfaz
+## 2 · Qué sabe hacer
 
-▸ **Tipo de interfaz:** comandos
+**De un tirón:** empieza cuando le digo al bot qué días y a qué horas quiero jugar, entonces él se pasa el día mirando la web del club cada pocos minutos, y al final queda un mensaje en mi Telegram en cuanto sale un hueco que me encaja.
 
-| Punto de entrada | Qué se hace ahí | Se llega desde | Función que lo usa |
-|---|---|---|---|
-| /avisar [día] [hora] | crea un aviso nuevo | (entrada) | F1 |
-| /misavisos | lista los avisos activos | (entrada) | F1, F4 |
-| /quitar [nº] | desactiva un aviso | /misavisos | F4 |
+**Apuntar lo que me interesa**
+La pone en marcha que le mande un mensaje con el día y la franja. Lo que hace es guardarlo asociado a mi cuenta de Telegram. Sé que va bien porque me responde repitiendo lo que ha entendido, y luego aparece si le pregunto por mis avisos.
 
----
+**Mirar la web del club**
+La pone en marcha el reloj: cada cinco minutos. Lo que hace es entrar en la web y apuntar qué huecos hay libres en ese momento. Sé que va bien porque cada pasada deja registro, y si la web no responde queda anotado como fallo y no como "no hay huecos", que es muy distinto.
 
-## 4 · Los datos
+**Avisarme**
+La pone en marcha que aparezca un hueco libre que le cuadra a alguien. Lo que hace es mandarle un mensaje de Telegram con el día, la hora y el enlace para reservar. Sé que va bien porque el mensaje llega en menos de cinco minutos desde que el hueco aparece, y porque no me llega dos veces el mismo aviso.
 
-| Cosa | Qué sé de ella | Se relaciona con |
-|---|---|---|
-| Suscriptor | su id de Telegram, su nombre | tiene muchos Avisos |
-| Aviso | día de la semana, franja horaria, activo o no | pertenece a un Suscriptor |
-| Hueco detectado | pista, día, hora, cuándo se detectó | dispara Notificaciones |
-| Notificación enviada | a quién, qué hueco, cuándo | evita repetir el mismo aviso |
+**Dejar de vigilar**
+La pone en marcha que le diga que quite un aviso, o que pase el día que me interesaba. Lo que hace es desactivarlo. Sé que va bien porque dejo de recibir avisos de esa franja y ya no sale en mi lista.
 
 ---
 
-## 5 · Fuera del plano
+## 3 · Por dónde se toca
 
-▸ Reservar la pista automáticamente
-▸ Más clubes además del mío
-▸ Otros deportes
-▸ Avisos por email o WhatsApp
-▸ Panel web para gestionar los avisos
+No hay pantallas. Todo pasa por mensajes de Telegram.
+
+Tres comandos y ya está:
+
+**/avisar** con el día y la hora, para crear un aviso nuevo.
+**/misavisos**, para ver los que tengo activos.
+**/quitar** con el número, para desactivar uno.
+
+Y la otra mitad del proyecto no la toca nadie: se ejecuta sola cada cinco minutos y solo se manifiesta cuando manda un mensaje.
 
 ---
 
-## 6 · Pendientes
+## 4 · Qué tiene que recordar
 
-- [ ] [PENDIENTE: si el club cambia su web y deja de funcionar, cómo me entero yo antes de que se queje alguien]
+De cada uno de nosotros: su id de Telegram y su nombre, para saber a quién escribir.
+
+De cada aviso: qué día de la semana, qué franja horaria y si sigue activo.
+
+De cada hueco que encuentra: qué pista, qué día, a qué hora y cuándo lo vio.
+
+Y una cosa que no existe en el mundo real pero hace falta: a quién ya le he avisado de qué hueco. Sin eso te llegarían diez mensajes del mismo hueco, uno cada cinco minutos, hasta que alguien lo cogiera.
+
+---
+
+## 5 · Lo que se queda fuera
+
+Reservar la pista automáticamente. Sería lo suyo, pero eso ya es meterse en el sistema de reservas del club y es otro proyecto.
+
+Más clubes aparte del mío.
+
+Otros deportes.
+
+Avisos por email o WhatsApp. Telegram es donde estamos todos.
+
+Una web para gestionar los avisos. Los comandos bastan.
+
+---
+
+## 6 · Lo que no sé todavía
+
+[PENDIENTE: si el club cambia su web y el bot deja de funcionar, ¿cómo me entero yo antes de que se queje alguien?]
 ```
 
 ---
 
 ## Qué señalar de cada ejemplo
 
-**Ejemplo 1.** El "qué NO hace" es lo que salva el proyecto: sin esa línea, "app de flexiones" se convierte en una app de entrenamiento completa. Y fíjate en que la función 3 tiene un criterio que incluye el caso de romper la racha, no solo el caso feliz.
+**Ejemplo 1.** El "qué NO va a hacer" es lo que salva el proyecto: sin esa línea, "app de flexiones" se convierte en una app de entrenamiento completa. Y fíjate en que "enseñarme mi racha" incluye el caso de romper la racha, no solo el caso feliz — la mitad del valor de la sección 2 está en esos remates.
 
-**Ejemplo 2.** Aparece una entidad, **Envío**, que no es obvia: hace falta porque una publicación puede salir bien en tres redes y fallar en la cuarta. Sin ella no se puede cumplir la función 4. Es el mejor ejemplo de cómo los datos salen de las funciones y no al revés.
+**Ejemplo 2.** En la sección 4 aparece algo que no es obvio: hace falta recordar cada envío por separado, porque una publicación puede salir bien en tres redes y petar en la cuarta. No estaba en la cabeza de nadie al empezar; sale de leer lo que el proyecto sabe hacer. Es el mejor ejemplo de que lo que hay que recordar se deduce de la sección 2 y no al revés.
 
-**Ejemplo 3.** Su interfaz es de comandos: un tipo más de los cinco, no una excepción al documento. Y aparece **Notificación enviada**, una entidad que no existe en el mundo real: existe solo porque el sistema necesita recordar a quién ya avisó para no duplicar mensajes. Cuando surge algo así en una entrevista, merece la pena pararse y señalarlo.
+**Ejemplo 3.** Su interfaz es de comandos, y la mitad del proyecto no la toca nadie: la pone en marcha el reloj. Aparece además "a quién ya le he avisado de qué hueco", una cosa que no existe en el mundo real y existe solo porque el proyecto necesita no repetirse. Cuando surge algo así en una entrevista, merece la pena pararse y señalarlo.
