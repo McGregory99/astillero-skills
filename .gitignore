@@ -1,2 +1,5 @@
 .DS_Store
 *.zip
+
+# Indice de skills para agentes (SDD), regenerable localmente
+.atl/
